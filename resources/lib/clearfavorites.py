@@ -24,10 +24,11 @@ import os
 import xbmc
 import xbmcaddon
 import xbmcgui
+from xbmcvfs import translatePath
 
 ADDON = xbmcaddon.Addon('plugin.video.drnu')
 
-CACHE_PATH = xbmc.translatePath(ADDON.getAddonInfo("Profile"))
+CACHE_PATH = translatePath(ADDON.getAddonInfo("Profile"))
 if not os.path.exists(CACHE_PATH):
     os.makedirs(CACHE_PATH)
 
