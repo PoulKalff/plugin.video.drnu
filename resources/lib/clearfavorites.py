@@ -42,4 +42,5 @@ FAVORITES_PATH = os.path.join(CACHE_PATH, 'favorites.pickle')
 
 if os.path.exists(FAVORITES_PATH):
     os.unlink(FAVORITES_PATH)
+
 xbmcgui.Dialog().ok(ADDON.getLocalizedString(30008), ADDON.getLocalizedString(30202))
